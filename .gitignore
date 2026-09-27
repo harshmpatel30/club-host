@@ -1,0 +1,9 @@
+# local tooling — not part of the website
+.claude/
+
+# club backups hold members' names: never publish them
+*.json
+
+# Windows / OneDrive clutter
+desktop.ini
+Thumbs.db
