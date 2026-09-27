@@ -35,14 +35,13 @@ Paste the Project URL between the first pair of quotes and the key between the s
 
 ## 3. Put the site online
 
-Every founder needs the same web address. Two free options:
+Every founder needs the same web address. This club's site is on **GitHub Pages**:
 
-- **Netlify:** go to <https://app.netlify.com/drop> and drag this folder onto the page.
-  Create a free account when asked, so the site stays up. You'll get an `https://….netlify.app` link.
-- **GitHub Pages:** create a repository, upload `index.html`, then turn on
-  *Settings → Pages*.
+- Live site: <https://harshmpatel30.github.io/club-host/>
+- Source files: <https://github.com/harshmpatel30/club-host> (repository `club-host`,
+  published from the `main` branch in *Settings → Pages*)
 
-The page must be opened over **https** (both options do this), because the browser only
+The page must be opened over **https** (GitHub Pages always is), because the browser only
 allows encryption on secure pages.
 
 ## 4. Move your club online and invite the founders
@@ -89,10 +88,15 @@ never touches the records, which stay in Supabase and on each device.
 2. **Keep the sync settings** near the top (`url` and `anonKey`). If they're emptied, the
    site stops syncing and falls back to "this device only".
 3. **Download a backup first** (shield button). It's a cheap safety net.
-4. **Publish the new version:** in Netlify, open your site → **Deploys**, then drag this
-   folder onto the upload area. The link stays the same.
+4. **Publish the new version:** this folder is a Git repository connected to GitHub.
+   Commit the change and push it (Claude Code does this for you when you ask:
+   "commit and push"). GitHub Pages rebuilds the site by itself in about a minute, at the
+   same link.
 5. **Founders just refresh the page** to get the new version. Nothing to reinstall, and
    nobody has to log in again unless they had locked the club.
+
+Never commit a downloaded backup file: it holds members' names and the repository is
+public. The `.gitignore` in this folder already blocks every `.json` file for that reason.
 
 ## Good to know
 
